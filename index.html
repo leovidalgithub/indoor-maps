@@ -2,17 +2,133 @@
 <html lang="es" ng-app="Scoutin">
 <head>
 	<meta charset="UTF-8">
-	<title>Scout in</title>
+	<title>Scout<u>in</u></title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+	<div ng-view></div>
+
+	<div class="container" ng-controller="mainCtrl">
+		
+	</div>
 
 
-<script src="js/angular.js"></script>	
-<script src="js/angular-route.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/main.js"></script>
+
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
+	<!-- BOOTSTRAP -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- UNDERSCORE -->
+	<!-- https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js -->
+	
+	<!-- ANGULAR -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+	
+	<!-- ANGULAR ROUTE -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+	
+	<!-- JQUERY UI -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
+	
+	<!-- JQUERY UI -->
+	<!-- <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+
+	<!-- MOOTOOLS -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/mootools/1.6.0/mootools.min.js"></script> -->
+	
+	<!-- PROTOTYPE -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script> -->
+
+	<!-- SCRIPT.ACULO.US -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script> -->
+	
+
+	<!-- MY ANGULAR APP -->
+	<script src="js/angular.js"></script>	
+	<script src="js/angular-route.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
 </body>
 </html>
+
+
+<!--
+// APP app.js
+app.js
+angular.module('myApp', ['ngRoute', 'myControllersContainer', 'myAppRoute', 'myAppConfig']);
+
+
+// CONTROLLER controllers.js 
+controllers.js
+angular.module('myControllersContainer', ['myServices'])
+	.controller('mainCtrl', function ($rootScope, $scope, Service) {
+
+//		$scope.watch('myVar', function() {
+//        	alert('hey, myVar has changed!');
+//    	});
+//		$scope.on('event-name', function( event, params ){
+//	
+//		} )
+
+	})
+
+// SERVICE services.js 
+services.js
+angular.module("myServices", [])
+	.factory("Service", function( $http, $scope ){
+		function getData(){
+			var apiUrl = "".replace('','');
+			return $http.get( apiUrl );
+		}
+		
+		
+//		$scope.broadcast('event-name', params...) // $emit
+		return {
+			.getData: getData
+		}
+	})
+
+// ROUTE routing.js 
+routing.js
+angular.module('myAppRoute', [])
+	.controller("HomeViewController", function( $scope ){
+		$scope.section = "Home Page";
+	})
+	.controller("AboutViewController", function( $scope ){
+		$scope.section = "About Page";
+	})
+	.controller("ProductViewController", function( $scope, $routeParams ){
+		$scope.productID = $routeParams.ID
+		$scope.section = "About Page";
+	})
+
+// CONFIG config.js 
+config.js
+angular.module('myAppConfig', [])
+	.config(function( $routeProvider ){
+		$routeProvider
+			.when('/', {
+				template: '<p>This is the {{ section }}</p>',
+				controller: "HomeViewController"
+			})
+			.when('/about', {
+				template: '<p>This is the {{ section }}</p>',
+				controller: "AboutViewController"
+			})
+			.when('/help', {
+				template: '/html/help.html',
+				controller: "... ViewController"
+			})
+			.when('/prod:ID', {
+				template: '/html/help.html',
+				controller: "ProductViewController"
+			})
+			.otherwise({redirectTo: '/'});
+	})
+
+-->
