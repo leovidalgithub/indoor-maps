@@ -26,10 +26,10 @@
 	<!-- https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js -->
 	
 	<!-- ANGULAR -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script> -->
 	
 	<!-- ANGULAR ROUTE -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script> -->
 	
 	<!-- JQUERY UI -->
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
@@ -51,84 +51,15 @@
 	<script src="js/angular.js"></script>	
 	<script src="js/angular-route.js"></script>
 	<script src="js/jquery.min.js"></script>
-	<script src="js/main.js"></script>
 
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/services.js"></script>
+	<!-- <script src="js/routing.js"></script> -->
+	<!-- <script src="js/config.js"></script> -->
 </body>
 </html>
 
 
-<!--
-// APP app.js
-app.js
-angular.module('myApp', ['ngRoute', 'myControllersContainer', 'myAppRoute', 'myAppConfig']);
 
 
-// CONTROLLER controllers.js 
-controllers.js
-angular.module('myControllersContainer', ['myServices'])
-	.controller('mainCtrl', function ($rootScope, $scope, Service) {
-
-//		$scope.watch('myVar', function() {
-//        	alert('hey, myVar has changed!');
-//    	});
-//		$scope.on('event-name', function( event, params ){
-//	
-//		} )
-
-	})
-
-// SERVICE services.js 
-services.js
-angular.module("myServices", [])
-	.factory("Service", function( $http, $scope ){
-		function getData(){
-			var apiUrl = "".replace('','');
-			return $http.get( apiUrl );
-		}
-		
-		
-//		$scope.broadcast('event-name', params...) // $emit
-		return {
-			.getData: getData
-		}
-	})
-
-// ROUTE routing.js 
-routing.js
-angular.module('myAppRoute', [])
-	.controller("HomeViewController", function( $scope ){
-		$scope.section = "Home Page";
-	})
-	.controller("AboutViewController", function( $scope ){
-		$scope.section = "About Page";
-	})
-	.controller("ProductViewController", function( $scope, $routeParams ){
-		$scope.productID = $routeParams.ID
-		$scope.section = "About Page";
-	})
-
-// CONFIG config.js 
-config.js
-angular.module('myAppConfig', [])
-	.config(function( $routeProvider ){
-		$routeProvider
-			.when('/', {
-				template: '<p>This is the {{ section }}</p>',
-				controller: "HomeViewController"
-			})
-			.when('/about', {
-				template: '<p>This is the {{ section }}</p>',
-				controller: "AboutViewController"
-			})
-			.when('/help', {
-				template: '/html/help.html',
-				controller: "... ViewController"
-			})
-			.when('/prod:ID', {
-				template: '/html/help.html',
-				controller: "ProductViewController"
-			})
-			.otherwise({redirectTo: '/'});
-	})
-
--->
